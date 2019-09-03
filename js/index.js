@@ -1,14 +1,14 @@
 // Your code goes here
-// * [ ] `mouseover`
+// * [x] `mouseover`
 // * [ ] `keydown`
-// * [ ] `wheel`
+// * [x] `wheel`
 // * [ ] `drag / drop`
 // * [ ] `load`
 // * [ ] `focus`
 // * [ ] `resize`
-// * [ ] `scroll`
+// * [x] `scroll`
 // * [ ] `select`
-// * [ ] `dblclick`
+// * [x] `dblclick`
 
 //navbar mouseover
 
@@ -34,3 +34,48 @@ afterButton.forEach(item => {
 })
 
 });
+
+// Image zoom 
+
+const navDouble = document.querySelectorAll('img');
+navDouble.forEach(item => {
+    item.addEventListener('dblclick', e => {
+    item.style.transform = 'scale(1.5)';
+    item.style.transition = ' transform 0.10s';
+})
+
+});
+
+const navReduce = document.querySelectorAll('img');
+navReduce.forEach(item => {
+    item.addEventListener('click', e => {
+    item.style.transform = 'scale(1.0)';
+    item.style.transition = ' transform 0.10s';
+})
+
+});
+
+// Paragraph Zoom 
+
+const pZoom = document.querySelectorAll('p');
+pZoom.forEach(item =>{
+    item.addEventListener('wheel', e =>{
+    item.style.transform = 'scale(1.25)';
+    item.style.backgroundColor = "lightyellow";
+    })
+})
+
+const pZoomOff = document.querySelectorAll('p');
+pZoomOff.forEach(item => {
+    item.addEventListener('click', e => {
+    item.style.transform = 'scale(1.0)';
+    item.style.transition = ' transform 0.10s';
+    item.style.backgroundColor = "white";
+})
+
+});
+
+
+
+
+
