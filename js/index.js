@@ -119,9 +119,12 @@ window.addEventListener('keydown', e => {
     window.alert ('Hey, look up!!');
 })
     
+// prevent default / propagation
 const navLinks = document.querySelectorAll(".nav a");
 navLinks.forEach(item => {
     item.addEventListener('click', e =>{
+    console.log(`Link was clicked! `)
         e.preventDefault();
+        e.stopPropagation();
     })
 })
