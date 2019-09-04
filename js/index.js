@@ -1,6 +1,6 @@
 // Your code goes here
 // * [xxx] `mouseover`
-// * [ ] `keydown`
+// * [x] `keydown`
 // * [x] `wheel`
 // * [x] `drag / drop`
 // * [x] `load`
@@ -9,6 +9,7 @@
 // * [x] `scroll`
 // * [ ] `select`
 // * [x] `dblclick`
+// * [x] 'copy'
 
 //navbar mouseenter/mouseleave
 
@@ -31,10 +32,11 @@ afterButton.forEach(item => {
     item.style.backgroundColor ="orange";
     item.style.color ="white";
     item.style.transition = 'color 0.25s';
+
+   
 })
 
 });
-
 // Image zoom 
 
 const navDouble = document.querySelectorAll('img');
@@ -117,3 +119,9 @@ window.addEventListener('keydown', e => {
     window.alert ('Hey, look up!!');
 })
     
+const navLinks = document.querySelectorAll(".nav a");
+navLinks.forEach(item => {
+    item.addEventListener('click', e =>{
+        e.preventDefault();
+    })
+})
