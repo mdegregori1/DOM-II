@@ -1,5 +1,5 @@
 // Your code goes here
-// * [x] `mouseover`
+// * [xxx] `mouseover`
 // * [ ] `keydown`
 // * [x] `wheel`
 // * [x] `drag / drop`
@@ -10,7 +10,7 @@
 // * [ ] `select`
 // * [x] `dblclick`
 
-//navbar mouseover
+//navbar mouseenter/mouseleave
 
 const navUp = document.querySelector(".nav");
 navUp.addEventListener("mouseenter", e => {
@@ -90,6 +90,14 @@ pDrag.forEach(item =>{
     })
 })
 
+//mouseover
+const mouseZoom = document.querySelectorAll('h2');
+mouseZoom.forEach(item => {
+    item.addEventListener('mouseover', e => {
+    item.style.transform = 'scale(1.5)';
+    item.style.transition = ' transform 0.5s';
+})
 
+});
 
 
