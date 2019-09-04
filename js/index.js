@@ -2,8 +2,8 @@
 // * [x] `mouseover`
 // * [ ] `keydown`
 // * [x] `wheel`
-// * [ ] `drag / drop`
-// * [ ] `load`
+// * [x] `drag / drop`
+// * [x] `load`
 // * [ ] `focus`
 // * [ ] `resize`
 // * [x] `scroll`
@@ -75,6 +75,20 @@ pZoomOff.forEach(item => {
 
 });
 
+// Load Pop up 
+
+window.addEventListener('load', e =>{
+    alert ("Welcome to The Fun Bus! Adventure Awaits...");
+});
+
+// Rotate Images by drag
+
+const pDrag = document.querySelectorAll('img');
+pDrag.forEach(item =>{
+    item.addEventListener('drag', e =>{
+    item.style.transform = 'rotate(180deg)';
+    })
+})
 
 
 
