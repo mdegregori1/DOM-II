@@ -90,7 +90,7 @@ pDrag.forEach(item =>{
     })
 })
 
-//mouseover
+//mouseover on section titles
 const mouseZoom = document.querySelectorAll('h2');
 mouseZoom.forEach(item => {
     item.addEventListener('mouseover', e => {
@@ -100,4 +100,20 @@ mouseZoom.forEach(item => {
 
 });
 
+// Copy 
 
+const copyAndPolice = document.querySelector('p');
+
+copyAndPolice.addEventListener('copy', e => {
+    window.alert ('You better give me credit, or Im telling the police.');
+})
+    
+
+
+// keydown
+
+
+window.addEventListener('keydown', e => {
+    window.alert ('Hey, look up!!');
+})
+    
